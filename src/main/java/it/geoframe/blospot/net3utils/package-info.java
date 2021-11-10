@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author sidereus, Niccolò Tubini
+ * @author sidereus, Niccolo' Tubini
  *
  */
 package it.geoframe.blospot.net3utils;
