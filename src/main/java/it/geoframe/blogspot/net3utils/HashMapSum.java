@@ -82,13 +82,13 @@ public class HashMapSum {
 	@In
 	public Map<Integer, double[]> inHMFromAboveVert12;
 	
-	@Description("Input hashmap (HM) of the current subbasin, fast contribute")
+	@Description("Input hashmap (HM) of the current subbasin")
 	@In
-    public Map<Integer, double[]> inHMComputationFastContribute;
+    public Map<Integer, double[]> inHMComputation1;
     
-	@Description("Input hashmap (HM) of the current subbasin, slow contribute")
+	@Description("Input hashmap (HM) of the current subbasin")
 	@In
-    public Map<Integer, double[]> inHMComputationSlowContribute;
+    public Map<Integer, double[]> inHMComputation2;
 
 	@Description("Output hashmap (HM) computed as the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
 	@Out
@@ -103,9 +103,9 @@ public class HashMapSum {
 		Entry<Integer, double[]> e;
 		Integer ID;
 		Integer keyComputation = -9999;
-		double valComputationFast = 0.0;
-		double valComputationSlow = 0.0;;
 		
+		double valueComputation1 = 0.0;
+		double valueComputation2 = 0.0;;
 		double value = 0.0;
 
 
@@ -194,21 +194,21 @@ public class HashMapSum {
 		}
 	
 	
-		if( inHMComputationFastContribute!=null){
-			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputationFastContribute.entrySet().iterator();
+		if( inHMComputation1!=null){
+			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputation1.entrySet().iterator();
 			Entry<Integer, double[]> eComputation = iterComputation.next();
 			keyComputation = eComputation.getKey();
-			valComputationFast = eComputation.getValue()[0];
+			valueComputation1 = eComputation.getValue()[0];
 		}
 
-		if( inHMComputationSlowContribute!=null){
-			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputationSlowContribute.entrySet().iterator();
+		if( inHMComputation2!=null){
+			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputation2.entrySet().iterator();
 			Entry<Integer, double[]> eComputation = iterComputation.next();
 			keyComputation = eComputation.getKey();
-			valComputationSlow = eComputation.getValue()[0];
+			valueComputation2 = eComputation.getValue()[0];
 		}
 		
-		outHMSum.put(keyComputation, new double[]{valComputationFast+valComputationSlow+value});
+		outHMSum.put(keyComputation, new double[]{valueComputation1+valueComputation2+value});
 
 
     }
