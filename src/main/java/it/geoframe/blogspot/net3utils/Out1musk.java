@@ -1,4 +1,4 @@
-package it.geoframe.blospot.net3utils;
+package it.geoframe.blogspot.net3utils;
 
 /*
  * $Id$

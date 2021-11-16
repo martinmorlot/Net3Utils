@@ -1,4 +1,4 @@
-package it.geoframe.blospot.net3utils;
+package it.geoframe.blogspot.net3utils;
 
 /*
  * GNU GPL v3 License
@@ -82,9 +82,13 @@ public class HashMapSum {
 	@In
 	public Map<Integer, double[]> inHMFromAboveVert12;
 	
-	@Description("Input hashmap (HM) of the current subbasin")
+	@Description("Input hashmap (HM) of the current subbasin, fast contribute")
 	@In
-    public Map<Integer, double[]> inHMComputation;
+    public Map<Integer, double[]> inHMComputationFastContribute;
+    
+	@Description("Input hashmap (HM) of the current subbasin, slow contribute")
+	@In
+    public Map<Integer, double[]> inHMComputationSlowContribute;
 
 	@Description("Output hashmap (HM) computed as the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
 	@Out
@@ -98,6 +102,10 @@ public class HashMapSum {
 		Iterator<Entry<Integer, double[]>> iter;
 		Entry<Integer, double[]> e;
 		Integer ID;
+		Integer keyComputation = -9999;
+		double valComputationFast = 0.0;
+		double valComputationSlow = 0.0;;
+		
 		double value = 0.0;
 
 
@@ -186,11 +194,21 @@ public class HashMapSum {
 		}
 	
 	
-	    Iterator<Entry<Integer, double[]>> iterComputation = inHMComputation.entrySet().iterator();
-		Entry<Integer, double[]> eComputation = iterComputation.next();
-		Integer keyComputation = eComputation.getKey();
-		double valComputation = eComputation.getValue()[0];
-		outHMSum.put(keyComputation, new double[]{valComputation+value});
+		if( inHMComputationFastContribute!=null){
+			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputationFastContribute.entrySet().iterator();
+			Entry<Integer, double[]> eComputation = iterComputation.next();
+			keyComputation = eComputation.getKey();
+			valComputationFast = eComputation.getValue()[0];
+		}
+
+		if( inHMComputationSlowContribute!=null){
+			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputationSlowContribute.entrySet().iterator();
+			Entry<Integer, double[]> eComputation = iterComputation.next();
+			keyComputation = eComputation.getKey();
+			valComputationSlow = eComputation.getValue()[0];
+		}
+		
+		outHMSum.put(keyComputation, new double[]{valComputationFast+valComputationSlow+value});
 
 
     }

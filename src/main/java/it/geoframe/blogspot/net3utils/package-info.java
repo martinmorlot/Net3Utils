@@ -5,4 +5,4 @@
  * @author sidereus, Niccolo' Tubini
  *
  */
-package it.geoframe.blospot.net3utils;
+package it.geoframe.blogspot.net3utils;
