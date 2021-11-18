@@ -101,114 +101,112 @@ public class HashMapSum {
 
 		Iterator<Entry<Integer, double[]>> iter;
 		Entry<Integer, double[]> e;
-		Integer ID;
-		Integer keyComputation = -9999;
-		
-		double valueComputation1 = 0.0;
-		double valueComputation2 = 0.0;;
+//		Integer ID;
+		Integer to_key = -9999;
+
 		double value = 0.0;
 
 
 		if( inHMFromAboveVert1!=null ){
 			iter = inHMFromAboveVert1.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 			value += e.getValue()[0];
 		}
 	
 		if( inHMFromAboveVert2!=null){
 			iter = inHMFromAboveVert2.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 			value += e.getValue()[0];
 		}
 	
 		if( inHMFromAboveVert3!=null){
 			iter = inHMFromAboveVert3.entrySet().iterator();
 			e = iter.next();
-		    ID = e.getKey();
+		    to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 	
 		if( inHMFromAboveVert4!=null){
 			iter = inHMFromAboveVert4.entrySet().iterator();		
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 			value += e.getValue()[0];
 		}
 	
 		if( inHMFromAboveVert5!=null){
 			iter = inHMFromAboveVert5.entrySet().iterator();		
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 			value += e.getValue()[0];
 		}
 	
 		if( inHMFromAboveVert6!=null){
 			iter = inHMFromAboveVert6.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert7!=null){
 			iter = inHMFromAboveVert7.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert8!=null){
 			iter = inHMFromAboveVert8.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert9!=null){
 			iter = inHMFromAboveVert9.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert10!=null){
 			iter = inHMFromAboveVert10.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert11!=null){
 			iter = inHMFromAboveVert11.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 		
 		if( inHMFromAboveVert12!=null){
 			iter = inHMFromAboveVert12.entrySet().iterator();
 			e = iter.next();
-			ID = e.getKey();
+			to_key = e.getKey();
 		    value += e.getValue()[0];
 		}
 	
 	
 		if( inHMComputation1!=null){
-			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputation1.entrySet().iterator();
-			Entry<Integer, double[]> eComputation = iterComputation.next();
-			keyComputation = eComputation.getKey();
-			valueComputation1 = eComputation.getValue()[0];
+			iter = inHMComputation1.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
 		}
 
 		if( inHMComputation2!=null){
-			Iterator<Entry<Integer, double[]>> iterComputation = inHMComputation2.entrySet().iterator();
-			Entry<Integer, double[]> eComputation = iterComputation.next();
-			keyComputation = eComputation.getKey();
-			valueComputation2 = eComputation.getValue()[0];
+			iter = inHMComputation2.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
 		}
-		
-		outHMSum.put(keyComputation, new double[]{valueComputation1+valueComputation2+value});
+
+		outHMSum.put(to_key, new double[]{value});
 
 
     }
