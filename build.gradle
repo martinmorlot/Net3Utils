@@ -2,7 +2,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-sourceCompatibility = '1.8'
+sourceCompatibility = 11
+targetCompatibility = 11
 
 // to get project version from command line, just type
 // $ gradle -PprojVersion=<version_number> build
@@ -28,7 +29,7 @@ repositories {
     }
 
     maven {
-        url 'http://maven.geo-solutions.it/'
+        url 'https://maven.geo-solutions.it/'
     }
     
 
@@ -41,7 +42,7 @@ repositories {
 
 dependencies {
 
-	compile name: 'oms-all'
+	implementation name: 'oms-all'
 
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     //api 'org.apache.commons:commons-math3:3.6.1'
