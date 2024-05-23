@@ -82,6 +82,79 @@ public class HashMapSum {
 	@In
 	public Map<Integer, double[]> inHMFromAboveVert12;
 	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert13;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert14;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert15;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert16;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert17;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert18;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert19;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert20;
+		
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert21;
+	
+		
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert22;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert23;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert24;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert25;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+    public Map<Integer, double[]> inHMFromAboveVert26;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert27;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert28;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert29;
+	
+	@Description("Input hashmap (HM) from the above subbasin")
+	@In
+	public Map<Integer, double[]> inHMFromAboveVert30;
+	
 	@Description("Input hashmap (HM) of the current subbasin")
 	@In
     public Map<Integer, double[]> inHMComputation1;
@@ -186,6 +259,132 @@ public class HashMapSum {
 		
 		if( inHMFromAboveVert12!=null){
 			iter = inHMFromAboveVert12.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert13!=null){
+			iter = inHMFromAboveVert13.entrySet().iterator();
+			e = iter.next();
+		    to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert14!=null){
+			iter = inHMFromAboveVert14.entrySet().iterator();		
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert15!=null){
+			iter = inHMFromAboveVert15.entrySet().iterator();		
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert16!=null){
+			iter = inHMFromAboveVert16.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert17!=null){
+			iter = inHMFromAboveVert17.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert18!=null){
+			iter = inHMFromAboveVert18.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert19!=null){
+			iter = inHMFromAboveVert19.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert20!=null){
+			iter = inHMFromAboveVert20.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert21!=null){
+			iter = inHMFromAboveVert21.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert22!=null){
+			iter = inHMFromAboveVert22.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert23!=null){
+			iter = inHMFromAboveVert23.entrySet().iterator();
+			e = iter.next();
+		    to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert24!=null){
+			iter = inHMFromAboveVert24.entrySet().iterator();		
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert25!=null){
+			iter = inHMFromAboveVert5.entrySet().iterator();		
+			e = iter.next();
+			to_key = e.getKey();
+			value += e.getValue()[0];
+		}
+	
+		if( inHMFromAboveVert26!=null){
+			iter = inHMFromAboveVert26.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert27!=null){
+			iter = inHMFromAboveVert27.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert28!=null){
+			iter = inHMFromAboveVert28.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert29!=null){
+			iter = inHMFromAboveVert29.entrySet().iterator();
+			e = iter.next();
+			to_key = e.getKey();
+		    value += e.getValue()[0];
+		}
+		
+		if( inHMFromAboveVert30!=null){
+			iter = inHMFromAboveVert30.entrySet().iterator();
 			e = iter.next();
 			to_key = e.getKey();
 		    value += e.getValue()[0];
