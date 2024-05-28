@@ -176,6 +176,7 @@ public class HashMapSum {
     public void exec() {
 
         outHMSum = new HashMap<Integer, double[]>();
+        outHMSumLog = new HashMap<Integer, double[]>();
 
 		Iterator<Entry<Integer, double[]>> iter;
 		Entry<Integer, double[]> e;
