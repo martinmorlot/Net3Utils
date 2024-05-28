@@ -26,6 +26,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import oms3.annotations.*;
+import java.lang.Math;
 
 /**
  *
@@ -166,6 +167,10 @@ public class HashMapSum {
 	@Description("Output hashmap (HM) computed as the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
 	@Out
     public HashMap<Integer, double[]> outHMSum;
+    
+    @Description("Output log hashmap (HM) computed as the log of the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
+	@Out
+    public HashMap<Integer, double[]> outHMSumLog;
 
     @Execute
     public void exec() {
@@ -406,8 +411,8 @@ public class HashMapSum {
 		}
 
 		outHMSum.put(to_key, new double[]{value});
-
-
+		
+		outHMSumLog.put(to_key, new double[]{Math.log10(value)});
     }
 
 }
