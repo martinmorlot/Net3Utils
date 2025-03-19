@@ -171,12 +171,18 @@ public class HashMapSum {
     @Description("Output log hashmap (HM) computed as the log of the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
 	@Out
     public HashMap<Integer, double[]> outHMSumLog;
+    
+    @Description("Output sqrt hashmap (HM) computed as the log of the sum of the input values of the HM provided as input. The HM ID is the ID of the current subbasin.")
+	@Out
+    public HashMap<Integer, double[]> outHMSumSqrt;
+
 
     @Execute
     public void exec() {
 
         outHMSum = new HashMap<Integer, double[]>();
         outHMSumLog = new HashMap<Integer, double[]>();
+        outHMSumSqrt = new HashMap<Integer, double[]>();
 
 		Iterator<Entry<Integer, double[]>> iter;
 		Entry<Integer, double[]> e;
@@ -414,6 +420,8 @@ public class HashMapSum {
 		outHMSum.put(to_key, new double[]{value});
 		
 		outHMSumLog.put(to_key, new double[]{Math.log10(value)});
+		
+		outHMSumSqrt.put(to_key, new double[]{Math.sqrt(value)});
     }
 
 }
